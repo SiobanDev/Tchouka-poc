@@ -1,8 +1,9 @@
 import React from "react";
 //styles
 import "./Step1.style.css";
+//components
 import NotesToChoose from "./NotesToChoose";
-import Staves from "./Staves";
+import Staves from "../main/Staves";
 
 const Step1 = () => {
   return (

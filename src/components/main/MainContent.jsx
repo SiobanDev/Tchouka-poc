@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 //components
 import Step1 from "../step1/Step1";
 import Step2 from "../step2/Step2";
 import Home from "./Home";
-//context
-import PartitionContext from "../../context/PartitionContext";
 
 export default function MainContent() {
   return (
