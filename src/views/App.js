@@ -8,12 +8,13 @@ import PartitionContext from "../context/PartitionContext";
 function App() {
   var notes = [];
   var freeTime = 42;
+  const [allNotesWidth, setAllNotesWidth] = useState(0);
 
   return (
     <Router>
       <Header />
       <PartitionContext.Provider
-        value={{ notes, freeTime }}
+        value={{ notes, freeTime, allNotesWidth, setAllNotesWidth }}
       >
         <MainContent />
       </PartitionContext.Provider>

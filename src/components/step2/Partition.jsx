@@ -12,12 +12,12 @@ import Staves from "../main/Staves";
 const Partition = () => {
   const [allNotesWidth, setAllNotesWidth] = useState(0);
   const partitionContext = useContext(PartitionContext);
-  // const userComposition = partitionContext.notes;
-  const userComposition = partitionExample;
+  const userComposition = partitionContext.notes;
+  // const userComposition = partitionExample;
 
   useEffect(()=>{
     userComposition.map((note) => {
-      addNoteToDom(note.image, allNotesWidth, setAllNotesWidth);
+      addNoteToDom(note, partitionContext.notes, note.image, allNotesWidth, setAllNotesWidth);
     });
 
   }, [])

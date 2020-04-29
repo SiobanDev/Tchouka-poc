@@ -24,7 +24,6 @@ import { addNoteToDom, addNoteToContext } from "../../services/staveService";
 import PartitionContext from "../../context/PartitionContext";
 
 export default function NotesToChoose() {
-  const [allNotesWidth, setAllNotesWidth] = useState(0);
   const partitionContext = useContext(PartitionContext);
 
   return (
@@ -33,7 +32,15 @@ export default function NotesToChoose() {
         className="note"
         src={fourBeatsWithStave}
         onClick={() => {
-          addNoteToDom(noteWholeNote, partitionContext.notes, fourBeats, allNotesWidth, setAllNotesWidth);
+          const onStep1 = addNoteToDom(
+            fourBeats,
+            partitionContext.allNotesWidth,
+            partitionContext.setAllNotesWidth
+          );
+
+          if (onStep1) {
+            addNoteToContext(noteWholeNote, partitionContext.notes);
+          }
         }}
         alt="musical-note"
       />
@@ -42,7 +49,11 @@ export default function NotesToChoose() {
         className="note"
         src={twoBeatsWithStave}
         onClick={() => {
-          addNoteToDom(noteTwoCrochets, partitionContext.notes, twoBeats, allNotesWidth, setAllNotesWidth);
+          const onStep1 = addNoteToDom(twoBeats, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth);
+
+          if (onStep1) {
+            addNoteToContext(noteTwoCrochets, partitionContext.notes);
+          }
         }}
         alt="musical-note"
       />
@@ -50,7 +61,10 @@ export default function NotesToChoose() {
         className="note"
         src={oneBeatWithStave}
         onClick={() => {
-          addNoteToDom(noteCrochet, partitionContext.notes,oneBeat, allNotesWidth, setAllNotesWidth);
+          const onStep1 = addNoteToDom(oneBeat, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth);
+          if (onStep1) {
+            addNoteToContext(noteCrochet, partitionContext.notes);
+          }
         }}
         alt="musical-note"
       />
@@ -58,7 +72,11 @@ export default function NotesToChoose() {
         className="note"
         src={halfBeatWithStave}
         onClick={() => {
-          addNoteToDom(noteQuaver, partitionContext.notes, halfBeat, allNotesWidth, setAllNotesWidth);
+          const onStep1 = addNoteToDom(halfBeat, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth);
+
+          if (onStep1) {
+            addNoteToContext(noteQuaver, partitionContext.notes);
+          }
         }}
         alt="musical-note"
       />
@@ -66,7 +84,10 @@ export default function NotesToChoose() {
         className="note"
         src={quarterBeatWithStave}
         onClick={() => {
-          addNoteToDom(noteSemiQuaver, partitionContext.notes, quarterBeat, allNotesWidth, setAllNotesWidth);
+          const onStep1 = addNoteToDom(quarterBeat, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth);
+          if (onStep1) {
+            addNoteToContext(noteSemiQuaver, partitionContext.notes);
+          }
         }}
         alt="musical-note"
       />
