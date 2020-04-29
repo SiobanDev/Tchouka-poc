@@ -22,7 +22,7 @@ export function addNoteToDom(
 
   if ((noteImage, allNotesWidth, setallNotesWidth)) {
     if (stave1Width >= allNotesWidth + noteWidth) {
-      
+
       stave1Element.appendChild(noteElement);
       setallNotesWidth(allNotesWidth + noteWidth);
 
@@ -37,6 +37,7 @@ export function addNoteToDom(
       addNoteToContext(newNote, partitionNotesList);
 
       console.log("allNotesWidth : " + allNotesWidth);
+      
       return true;
 
     } else if (allNotesWidth >= 200) {

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 //images
 import fourBeatsWithStave from "./step1.images/four-beats-with-stave.png";
 import twoBeatsWithStave from "./step1.images/two-beats-with-stave.png";

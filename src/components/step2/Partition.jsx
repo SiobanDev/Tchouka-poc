@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 //services
 import {addNoteToDom} from "../../services/staveService";
 //context
@@ -10,17 +10,15 @@ import Staves from "../main/Staves";
 
 
 const Partition = () => {
-  const [allNotesWidth, setAllNotesWidth] = useState(0);
   const partitionContext = useContext(PartitionContext);
   const userComposition = partitionContext.notes;
   // const userComposition = partitionExample;
 
   useEffect(()=>{
     userComposition.map((note) => {
-      addNoteToDom(note, partitionContext.notes, note.image, allNotesWidth, setAllNotesWidth);
+      addNoteToDom(note, partitionContext.notes, note.image, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth);
     });
-
-  }, [])
+  }, [userComposition, partitionContext.notes, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth])
 
   
   return (
