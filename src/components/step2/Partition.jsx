@@ -1,29 +1,28 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 //services
-import {addNoteToDom} from "../../services/staveService";
+import { addNoteToDom } from "../../services/staveService";
 //context
 import PartitionContext from "../../context/PartitionContext";
-//data
-import {partitionExample} from "../../mocks/partition";
 //components
-import Staves from "../main/Staves";
-
+import StaveContainer from "../stave/StaveContainer";
 
 const Partition = () => {
   const partitionContext = useContext(PartitionContext);
   const userComposition = partitionContext.notes;
-  // const userComposition = partitionExample;
 
-  useEffect(()=>{
-    userComposition.map((note) => {
-      addNoteToDom(note, partitionContext.notes, note.image, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth);
-    });
-  }, [userComposition, partitionContext.notes, partitionContext.allNotesWidth, partitionContext.setAllNotesWidth])
+  userComposition.map((note) => {
+    addNoteToDom(
+      note,
+      partitionContext.notes,
+      note.image,
+      partitionContext.allNotesWidth,
+      partitionContext.setAllNotesWidth
+    );
 
-  
-  return (
-    <Staves />
-  );
+    return null;
+  });
+
+  return <StaveContainer />;
 };
 
 export default Partition;

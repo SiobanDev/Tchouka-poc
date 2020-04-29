@@ -6,15 +6,17 @@ import MainContent from "../components/main/MainContent";
 import PartitionContext from "../context/PartitionContext";
 
 function App() {
-  var notes = [];
   var freeTime = 42;
   const [allNotesWidth, setAllNotesWidth] = useState(0);
+  const [partition, setPartition] = useState([]);
+
+  console.log("partition" + JSON.stringify(partition));
 
   return (
     <Router>
       <Header />
       <PartitionContext.Provider
-        value={{ notes, freeTime, allNotesWidth, setAllNotesWidth }}
+        value={{ partition, setPartition, freeTime, allNotesWidth, setAllNotesWidth }}
       >
         <MainContent />
       </PartitionContext.Provider>

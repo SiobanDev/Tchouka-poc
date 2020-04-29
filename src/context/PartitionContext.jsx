@@ -1,7 +1,8 @@
 import React from "react";
 
 const initialContextValues = {
-  notes: [],
+  partition: [],
+  setPartition: () => {},
   freeTime: 42,
   allNotesWidth: 0,
   setAllNotesWidth: ()=>{}

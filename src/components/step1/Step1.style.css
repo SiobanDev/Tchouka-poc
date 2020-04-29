@@ -1,7 +1,8 @@
-.notes-container {
+#notes-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 5%;
 }
 
 .note {
