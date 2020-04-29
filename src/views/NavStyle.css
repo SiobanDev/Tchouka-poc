@@ -12,6 +12,9 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+.md-step-title::selection{
+    background-color: rgb(219, 45, 45);
+}
 .md-stepper-horizontal {
     justify-content: center;
 	display:table;
