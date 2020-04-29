@@ -1,6 +1,4 @@
 export function addNoteToDom(
-  newNote,
-  partitionNotesList,
   noteImage,
   allNotesWidth,
   setallNotesWidth
@@ -34,7 +32,6 @@ export function addNoteToDom(
       noteElement.style.left = `${allNotesWidth - 100}%`;
       stave2Element.appendChild(noteElement);
       setallNotesWidth(allNotesWidth + noteWidth);
-      addNoteToContext(newNote, partitionNotesList);
 
       console.log("allNotesWidth : " + allNotesWidth);
       
