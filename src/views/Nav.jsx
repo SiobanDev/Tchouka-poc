@@ -19,21 +19,24 @@ const Nav = () => {
 
         <div class="md-step active">
             <div class="md-step-circle"><span>1</span></div>
-            <Link to="/rythme"><div class="md-step-title">Rythme: Choose your note and create your own music partition</div></Link>
+            <Link to="/rythme"><div class="md-step-title">Rythme</div></Link>
+            <div class="sous-titre">Choose your note and create your own music partition</div>
             <div class="md-step-bar-left"></div>
             <div class="md-step-bar-right"></div>
         </div>
 
         <div class="md-step active">
             <div class="md-step-circle"><span>2</span></div>
-            <Link to="/percussions"><div class="md-step-title">Learn: Associate the note with a part of the body</div></Link>
+            <Link to="/percussions"><div class="md-step-title">Learn</div></Link>
+            <div class="sous-titre" >Associate the note with a part of the body</div>
             <div class="md-step-bar-left"></div>
             <div class="md-step-bar-right"></div>
         </div>
 
         <div class="md-step active">
             <div class="md-step-circle"><span>3</span></div>
-            <Link to=""><div class="md-step-title">Percussion: Listen to the percussion that you made</div></Link>
+            <Link to=""><div class="md-step-title">Percussion</div></Link>
+            <div class="sous-titre" >Listen to the percussion that you made</div>
             <div class="md-step-bar-left"></div>
             <div class="md-step-bar-right"></div>
         </div>
