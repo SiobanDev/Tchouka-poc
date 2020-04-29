@@ -1,7 +1,5 @@
 import React from "react";
 import { Router, Switch, Link } from "react-router-dom";
-//components
-import Step1 from "../components/step1/Step1";
 import "./NavStyle.css";
 
 const Nav = () => {
