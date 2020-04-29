@@ -33,8 +33,7 @@ export default function NotesToChoose() {
         className="note"
         src={fourBeatsWithStave}
         onClick={() => {
-          addNoteToDom(fourBeats, allNotesWidth, setAllNotesWidth);
-          addNoteToContext(noteWholeNote, partitionContext.notes)
+          addNoteToDom(noteWholeNote, partitionContext.notes, fourBeats, allNotesWidth, setAllNotesWidth);
         }}
         alt="musical-note"
       />
@@ -43,8 +42,7 @@ export default function NotesToChoose() {
         className="note"
         src={twoBeatsWithStave}
         onClick={() => {
-          addNoteToDom(twoBeats, allNotesWidth, setAllNotesWidth);
-          addNoteToContext(noteTwoCrochets, partitionContext.notes)
+          addNoteToDom(noteTwoCrochets, partitionContext.notes, twoBeats, allNotesWidth, setAllNotesWidth);
         }}
         alt="musical-note"
       />
@@ -52,8 +50,7 @@ export default function NotesToChoose() {
         className="note"
         src={oneBeatWithStave}
         onClick={() => {
-          addNoteToDom(oneBeat, allNotesWidth, setAllNotesWidth);
-          addNoteToContext(noteCrochet, partitionContext.notes)
+          addNoteToDom(noteCrochet, partitionContext.notes,oneBeat, allNotesWidth, setAllNotesWidth);
         }}
         alt="musical-note"
       />
@@ -61,8 +58,7 @@ export default function NotesToChoose() {
         className="note"
         src={halfBeatWithStave}
         onClick={() => {
-          addNoteToDom(halfBeat, allNotesWidth, setAllNotesWidth);
-          addNoteToContext(noteQuaver, partitionContext.notes)
+          addNoteToDom(noteQuaver, partitionContext.notes, halfBeat, allNotesWidth, setAllNotesWidth);
         }}
         alt="musical-note"
       />
@@ -70,8 +66,7 @@ export default function NotesToChoose() {
         className="note"
         src={quarterBeatWithStave}
         onClick={() => {
-          addNoteToDom(quarterBeat, allNotesWidth, setAllNotesWidth);
-          addNoteToContext(noteSemiQuaver, partitionContext.notes)
+          addNoteToDom(noteSemiQuaver, partitionContext.notes, quarterBeat, allNotesWidth, setAllNotesWidth);
         }}
         alt="musical-note"
       />
