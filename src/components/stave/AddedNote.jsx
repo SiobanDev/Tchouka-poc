@@ -8,7 +8,8 @@ import oneBeat from "./stave.images/one-beat.png";
 import halfBeat from "./stave.images/half-beat.png";
 import quarterBeat from "./stave.images/quarter-beat.png";
 
-const AddedNote = ({ note, allNotesWidth }) => {
+
+const AddedNote = ({ note }) => {
   let addedNoteImage = null;
 
   if (note) {
@@ -33,14 +34,11 @@ const AddedNote = ({ note, allNotesWidth }) => {
     }
   }
 
-  console.log("allNotesWidth : " + allNotesWidth);
-  
   return (
     <img
       className="added-note"
       src={addedNoteImage}
       alt="added-note"
-      style={{ left: `${allNotesWidth}%` }}
     />
   );
 };

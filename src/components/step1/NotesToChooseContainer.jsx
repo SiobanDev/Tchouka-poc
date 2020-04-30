@@ -9,6 +9,9 @@ export default function NotesToChooseContainer() {
   const partitionContext = useContext(PartitionContext);
   const partition = partitionContext.partition;
   const setPartition = partitionContext.setPartition;
+  let allNotesWidth = partitionContext.allNotesWidth;
+  let setAllNotesWidth = partitionContext.setAllNotesWidth;
+  const addedNoteWidth = partitionContext.addedNoteWidth;
 
   return (
     <div id="notes-container">
@@ -18,6 +21,7 @@ export default function NotesToChooseContainer() {
             imageSource={note.image}
             onClick={() => {
               setPartition([...partition, note]);
+              setAllNotesWidth(allNotesWidth + addedNoteWidth);
             }}
             key={note.id}
           />

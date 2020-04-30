@@ -14,29 +14,23 @@ const StaveContainer = () => {
 
   // console.log("partition dans StaveContainer " + JSON.stringify(partition));
 
-  if (partition.length > 0) {
-    firstStaveNotes = partition.slice(0, 19);
-    secondStaveNotes = partition.slice(20, 39);
+  useEffect(() => {
+    if (partition.length > 0) {
+      firstStaveNotes = partition.slice(0, 19);
+      secondStaveNotes = partition.slice(20, 39);
 
-    console.log(
-      "firstStaveNotes dans StaveContainer " + JSON.stringify(firstStaveNotes)
-    );
-  }
+      console.log(
+        "firstStaveNotes dans StaveContainer " + JSON.stringify(firstStaveNotes)
+      );
+    }
+  }, [partition, firstStaveNotes, secondStaveNotes]);
 
   return (
     <div className="staves-container">
       {
         <>
-          <Stave
-            id="1"
-            notes={firstStaveNotes}
-            allNotesWidth={partitionContext.allNotesWidth}
-          />
-          <Stave
-            id="2"
-            notes={secondStaveNotes}
-            allNotesWidth={partitionContext.allNotesWidth}
-          />
+          <Stave id="1" partitionNotes={firstStaveNotes} />
+          <Stave id="2" partitionNotes={secondStaveNotes} />
         </>
       }
     </div>

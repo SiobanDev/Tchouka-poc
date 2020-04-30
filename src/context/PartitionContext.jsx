@@ -5,7 +5,8 @@ const initialContextValues = {
   setPartition: () => {},
   freeTime: 42,
   allNotesWidth: 0,
-  setAllNotesWidth: ()=>{}
+  setAllNotesWidth: ()=>{},
+  addedNoteWidth: 5
 };
 
 const PartitionContext = React.createContext(initialContextValues);
