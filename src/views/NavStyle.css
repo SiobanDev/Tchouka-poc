@@ -12,20 +12,22 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+
+.md-step a{
+	text-decoration: none;
+}
 .md-step-title{
 	font-size: 40px;
 	text-decoration: none;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.selected .md-step-title{
+.md-step a.active .md-step-title{
 	background-color: orangered;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.selected{
-	text-decoration: none;
-}
+
 .md-stepper-horizontal {
     justify-content: center;
 	display:table;
