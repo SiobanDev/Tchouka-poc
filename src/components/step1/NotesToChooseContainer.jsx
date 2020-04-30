@@ -12,7 +12,6 @@ export default function NotesToChooseContainer() {
 
   console.log("partition" + JSON.stringify(partition));
 
-
   return (
     <div id="notes-container">
       {availableNotes.map((note) => {
