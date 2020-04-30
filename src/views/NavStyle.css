@@ -12,9 +12,19 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+.md-step-title{
+	font-size: 40px;
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 .selected .md-step-title{
-	background-color: gray;
-	color: green;
+	background-color: orangered;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.selected{
+	text-decoration: none;
 }
 .md-stepper-horizontal {
     justify-content: center;
