@@ -12,10 +12,11 @@ const StaveContainer = () => {
   let firstStaveNotes = [];
   let secondStaveNotes = [];
 
+  console.log("partition " + JSON.stringify(partition));
   console.log("allNotesWidth " + partitionContext.allNotesWidth);
 
   if (partition.length > 0) {
-    firstStaveNotes = partition.slice(0, 19);
+    firstStaveNotes = partition.slice(0, 20);
     secondStaveNotes = partition.slice(20, 39);
 
     // console.log("firstStaveNotes dans StaveContainer " + JSON.stringify(firstStaveNotes));
