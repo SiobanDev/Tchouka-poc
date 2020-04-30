@@ -10,8 +10,6 @@ export default function NotesToChooseContainer() {
   const partition = partitionContext.partition;
   const setPartition = partitionContext.setPartition;
 
-  console.log("partition" + JSON.stringify(partition));
-
   return (
     <div id="notes-container">
       {availableNotes.map((note) => {
@@ -19,8 +17,7 @@ export default function NotesToChooseContainer() {
           <NotesToChoose
             imageSource={note.image}
             onClick={() => {
-              partition.push(note);
-              setPartition(partition);
+              setPartition([...partition, note]);
             }}
             key={note.id}
           />

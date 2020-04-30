@@ -10,28 +10,31 @@ import quarterBeat from "./stave.images/quarter-beat.png";
 
 const AddedNote = ({ note, allNotesWidth }) => {
   let addedNoteImage = null;
-  
-  switch (note.duration) {
-    case 4:
-      addedNoteImage = fourBeats;
-      break;
-    case 2:
-      addedNoteImage = twoBeats;
-      break;
-    case 1:
-      addedNoteImage = oneBeat;
-      break;
-    case 0.5:
-      addedNoteImage = halfBeat;
-      break;
-    case 0.25:
-      addedNoteImage = quarterBeat;
-      break;
-    default:
-      console.log("Error with the added note image");
-        
+
+  if (note) {
+    switch (note.duration) {
+      case 4:
+        addedNoteImage = fourBeats;
+        break;
+      case 2:
+        addedNoteImage = twoBeats;
+        break;
+      case 1:
+        addedNoteImage = oneBeat;
+        break;
+      case 0.5:
+        addedNoteImage = halfBeat;
+        break;
+      case 0.25:
+        addedNoteImage = quarterBeat;
+        break;
+      default:
+        console.log("Error with the added note image");
+    }
   }
 
+  console.log("allNotesWidth : " + allNotesWidth);
+  
   return (
     <img
       className="added-note"

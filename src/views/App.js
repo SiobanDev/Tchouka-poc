@@ -10,7 +10,7 @@ function App() {
   const [allNotesWidth, setAllNotesWidth] = useState(0);
   const [partition, setPartition] = useState([]);
 
-  console.log("partition" + JSON.stringify(partition));
+  // console.log("partition dans App " + JSON.stringify(partition));
 
   return (
     <Router>
