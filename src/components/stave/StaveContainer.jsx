@@ -12,13 +12,12 @@ const StaveContainer = () => {
   let firstStaveNotes = [];
   let secondStaveNotes = [];
 
-  useEffect(()=>{
+  useEffect(() => {
     if (partition.length > 0) {
-    firstStaveNotes = partition.slice(0, 19);
-    secondStaveNotes = partition.slice(20, 39);
-  }
-  }, [partition])
-  
+      firstStaveNotes = partition.slice(0, 19);
+      secondStaveNotes = partition.slice(20, 39);
+    }
+  }, [partition, firstStaveNotes, secondStaveNotes]);
 
   return (
     <div className="staves-container">
