@@ -1,46 +1,25 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 //styles
 import "./Staves.style.css";
-//images
-import fourBeats from "./stave.images/four-beats.png";
-import twoBeats from "./stave.images/two-beats.png";
-import oneBeat from "./stave.images/one-beat.png";
-import halfBeat from "./stave.images/half-beat.png";
-import quarterBeat from "./stave.images/quarter-beat.png";
 
+//context
+import PartitionContext from "../../context/PartitionContext";
 
-const AddedNote = ({ note }) => {
-  let addedNoteImage = null;
+const AddedNote = ({ noteData }) => {
+  const partitionContext = useContext(PartitionContext);
+  const addedNoteWidth = partitionContext.addedNoteWidth;
 
-  if (note) {
-    switch (note.duration) {
-      case 4:
-        addedNoteImage = fourBeats;
-        break;
-      case 2:
-        addedNoteImage = twoBeats;
-        break;
-      case 1:
-        addedNoteImage = oneBeat;
-        break;
-      case 0.5:
-        addedNoteImage = halfBeat;
-        break;
-      case 0.25:
-        addedNoteImage = quarterBeat;
-        break;
-      default:
-        console.log("Error with the added note image");
-    }
-  }
+  // console.log("noteData dans AddedNote " + JSON.stringify(noteData));
 
-  return (
-    <img
-      className="added-note"
-      src={addedNoteImage}
-      alt="added-note"
-    />
-  );
+    return (
+      <img
+        className="added-note"
+        src={noteData.image}
+        alt="added-note"
+        style={{ width: `${addedNoteWidth}%`}}
+      />
+    );
+
 };
 
 export default AddedNote;

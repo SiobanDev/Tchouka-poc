@@ -14,7 +14,7 @@ export default function NotesToChooseContainer() {
   const addedNoteWidth = partitionContext.addedNoteWidth;
 
   return (
-    <div id="notes-container">
+    <div id="notes-to-choose-container">
       {availableNotes.map((note) => {
         return (
           <NotesToChoose
