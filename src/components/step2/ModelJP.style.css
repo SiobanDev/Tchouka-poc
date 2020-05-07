@@ -1,0 +1,8 @@
+.body-part{
+  position: absolute;
+}
+
+#body-part-tchou{
+  left: 20%;
+  top: 25%;
+}

@@ -4,6 +4,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./Header";
 import MainContent from "../components/main/MainContent";
 import PartitionContext from "../context/PartitionContext";
+require('dotenv').config();
+
 
 function App() {
   var freeTime = 42;

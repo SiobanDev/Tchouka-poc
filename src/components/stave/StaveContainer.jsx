@@ -6,9 +6,9 @@ import Stave from "./Stave";
 //context
 import PartitionContext from "../../context/PartitionContext";
 
-const StaveContainer = () => {
+const StaveContainer = ({partition}) => {
   const partitionContext = useContext(PartitionContext);
-  const partition = partitionContext.partition;
+  partition = partitionContext.partition;
   let firstStaveNotes = [];
   let secondStaveNotes = [];
 

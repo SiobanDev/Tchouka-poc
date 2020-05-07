@@ -1,19 +1,18 @@
-.step2{
+#step2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  
 }
 
-.model-container{
+.model-container {
   width: 30%;
 }
 
-.step2 .staves-container{
+#step2 .staves-container {
   width: 65%;
 }
 
-.model{
+.model {
   max-height: 500px;
 }

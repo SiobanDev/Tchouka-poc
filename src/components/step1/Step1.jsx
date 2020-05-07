@@ -7,9 +7,9 @@ import StaveContainer from "../stave/StaveContainer";
 
 const Step1 = () => {
   return (
-    <section className="step1">
+    <section id="step1">
       <NotesToChooseContainer />
-      <StaveContainer />
+      <StaveContainer partition={[]} />
     </section>
   );
 };

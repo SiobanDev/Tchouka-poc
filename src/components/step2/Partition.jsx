@@ -9,15 +9,15 @@ import StaveContainer from "../stave/StaveContainer";
  */
 const Partition = () => {
   const partitionContext = useContext(PartitionContext);
-  const userComposition = partitionContext.notes;
+  const partition = partitionContext.notes;
 
-  userComposition.map((note) => {
-   
+  // partition.map((note) => {
+  //TO DO : consider the case where two exact movements follow : insert neutral position between them;
 
-    return null;
-  });
+  //   return null;
+  // });
 
-  return <StaveContainer />;
+  return <StaveContainer partition={partition}/>;
 };
 
 export default Partition;

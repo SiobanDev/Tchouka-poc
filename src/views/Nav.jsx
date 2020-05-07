@@ -6,40 +6,40 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-menu" role="navigation">
 
-      <div className="md-stepper-horizontal orange">
+      <ul className="md-stepper-horizontal orange">
 
-        <div className="md-step active">
+        <li className="md-step active">
             <div className="md-step-circle"><span>🏠</span></div>
-            <NavLink exact to="/"><div className="md-step-title">Home</div></NavLink>
+            <NavLink className="md-step-title" exact to="/">Home</NavLink>
             <div className="md-step-bar-left"></div>
             <div className="md-step-bar-right"></div>
-        </div>
+        </li>
 
-        <div className="md-step active">
+        <li className="md-step active">
             <div className="md-step-circle"><span>1</span></div>
-            <NavLink exact to="/rythme"><div className="md-step-title">Rythme</div></NavLink>
+            <NavLink className="md-step-title" exact to="/rythme">Rythme</NavLink>
             <div className="sous-titre">Choose your note and create your own music partition</div>
             <div className="md-step-bar-left"></div>
             <div className="md-step-bar-right"></div>
-        </div>
+        </li>
 
-        <div className="md-step active">
+        <li className="md-step active">
             <div className="md-step-circle"><span>2</span></div>
-            <NavLink exact to="/percussions"><div className="md-step-title">Percussion</div></NavLink>
+            <NavLink className="md-step-title" exact to="/percussions">Percussion</NavLink>
             <div className="sous-titre" >Associate the note with a part of the body</div>
             <div className="md-step-bar-left"></div>
             <div className="md-step-bar-right"></div>
-        </div>
+        </li>
 
-        <div className="md-step active">
+        <li className="md-step active">
             <div className="md-step-circle"><span>3</span></div>
-            <NavLink exact to="/learn"><div className="md-step-title">Learn</div></NavLink>
+            <NavLink className="md-step-title" exact to="/apprentissage">Learn</NavLink>
             <div className="sous-titre" >Listen to the percussion that you made</div>
             <div className="md-step-bar-left"></div>
             <div className="md-step-bar-right"></div>
-        </div>
+        </li>
 
-      </div>
+      </ul>
 
     </nav>
 
