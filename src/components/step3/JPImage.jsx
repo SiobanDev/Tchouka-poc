@@ -11,7 +11,7 @@ const JPImage = ({ noteData }) => {
         src={movementImageSrc}
         width="300px"
         height="300px"
-        alt="jean-patricia-movement"
+        alt={`jean-patricia-movement-duration-${noteData.duration}`}
         key={count++}
       />
     );

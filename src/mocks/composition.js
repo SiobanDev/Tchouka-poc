@@ -4,22 +4,29 @@ import { tchou, tchi, cla, bou, bi, dou, di, pou, pi } from "./movements";
 
 const movementsData = [tchou, tchi, cla, bou, bi, dou, di, pou, pi];
 
-export const compositionExample = partitionExample.map((partitionNote) => {
-  let count = 0;
-  let randomId = Math.floor(Math.random() * movementsData.length);
+let previousRandomId = null;
+let randomId = null;
 
+export const compositionExample = partitionExample.map((partitionNote) => {
   var compositionNote = {
-    id: count++,
+    ...partitionNote,
+  };
+  previousRandomId = randomId;
+
+  randomId = Math.floor(Math.random() * movementsData.length);
+
+  if (previousRandomId === randomId && randomId !== 0) {
+    randomId -= 1;
+  } else if (previousRandomId === randomId && randomId === 0) {
+    randomId += 1;
+  }
+
+  compositionNote = {
     ...partitionNote,
     movement: movementsData[randomId],
   };
-  console.log("randomId : " + randomId);
-  console.log(
-    "partitionExample before splice : " + JSON.stringify(partitionExample)
-  );
-  partitionExample.splice(randomId, 1);
-  console.log(
-    "partitionExample after splice : " + JSON.stringify(partitionExample)
-  );
+
+  // console.log("randomId : " + randomId);
+  // console.log("compositionNote : " + JSON.stringify(compositionNote));
   return compositionNote;
 });
