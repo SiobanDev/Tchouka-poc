@@ -26,7 +26,12 @@ export const compositionExample = partitionExample.map((partitionNote) => {
     movement: movementsData[randomId],
   };
 
+
   // console.log("randomId : " + randomId);
   // console.log("compositionNote : " + JSON.stringify(compositionNote));
   return compositionNote;
 });
+
+compositionExample.map((note) => {
+  note.id += -1;
+})

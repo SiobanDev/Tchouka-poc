@@ -20,6 +20,12 @@ export const di = ["/medias/images/di-rd.svg"];
 
 export const cla = ["/medias/images/cla-rd.svg"];
 
-export const pou = ["/medias/images/pou-debut-rd.svg", "/medias/images/pou-fin-rd.svg"];
+export const pou = [
+  "/medias/images/pou-debut-rd.svg",
+  "/medias/images/pou-fin-rd.svg",
+];
 
-export const pi = ["/medias/images/pi-debut-rd.svg", "/medias/images/pi-fin-rd.svg"];
+export const pi = [
+  "/medias/images/pi-debut-rd.svg",
+  "/medias/images/pi-fin-rd.svg",
+];
