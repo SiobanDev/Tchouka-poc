@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavStyle.css";
 
 const Nav = () => {
@@ -9,7 +9,7 @@ const Nav = () => {
       <ul className="md-stepper-horizontal orange">
 
         <li className="md-step active">
-            <div className="md-step-circle"><span>🏠</span></div>
+            <div className="md-step-circle"><span>0</span></div>
             <NavLink className="md-step-title" exact to="/">Home</NavLink>
             <div className="md-step-bar-left"></div>
             <div className="md-step-bar-right"></div>
