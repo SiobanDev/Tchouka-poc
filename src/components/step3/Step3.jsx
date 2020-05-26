@@ -14,35 +14,30 @@ import {
   getVelocity,
 } from "framer-motion";
 import { Slideshow } from "./Slideshow";
-import JPAnimation from "./JPAnimation";
-
+import JPAnimation from "./JPAnimationB";
 
 const Step3 = () => {
   const [playAnimation, setPlayAnimation] = useState(false);
-  const controls = useAnimation();
 
   console.log("compositionExample : " + JSON.stringify(compositionExample));
+  console.log("playAnimation : " + playAnimation);
 
+  return (
+    <section id="step3">
+      <button className="btn" onClick={() => setPlayAnimation(true)}>
+        Jouer
+      </button>
+      <div id="JP-container">
+      {
+      playAnimation ?
+        <JPAnimation resetAnimation={() => setPlayAnimation(false)}/>
+      :
+        <img className="movement-image" src={compositionExample[0].movement[0]} />
+    }
+    </div>
 
-  // if (playAnimation) {
-    // setPlayAnimation(false);
-    return (
-      <section id="step3">
-        <button
-          className="btn"
-          onClick={()=>
-            setPlayAnimation((preValue) => {
-            return preValue ? false : true;
-          })
-          }
-        >
-          Jouer
-        </button>
-        <div id="JP-container">
-          <JPAnimation animate={{display: playAnimation}} />
-        </div>
-      </section>
-    );
+    </section>
+  );
   // } else {
   //   return (
   //     <section id="step3">

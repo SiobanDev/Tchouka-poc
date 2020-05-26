@@ -24,32 +24,6 @@ const JPAnimation = () => {
     return sumOfPreviousDurations;
   };
 
-  const wholeAnimationImages = [];
-
-  const composeAnimation = (notes) => {
-    for (let i = 0; i < notes.length; i++) {
-      for (let y = 0; y < notes[i].movement.length; y++) {
-        wholeAnimationImages.push(
-          <motion.img
-            id={`image-jp-${i}`}
-            className="movement-image"
-            key={`key-${i}`}
-            src={notes[i].movement[y]}
-            initial={{ opacity: 0, position: "absolute" }}
-            animate={"visible"}
-            exit={{ opacity: 0 }}
-            transition={{
-              ease: "linear",
-              duration: 1,
-              delay: getDurationOfPreviousNotes(notes, i),
-            }}
-          />
-        );
-      }
-    }
-    return wholeAnimationImages;
-  };
-
   const displayTwoImagesForOneNote = (notes) => {
     for (let i = 1; i < notes.length - 2; i++) {
       for (let y = 0; y < notes[i].movement.length; y++) {
@@ -60,7 +34,7 @@ const JPAnimation = () => {
             key={`key-${i}`}
             src={notes[i].movement[y]}
             initial={{ opacity: 0, position: "absolute" }}
-            animate={"visible"}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
               ease: "linear",
@@ -73,7 +47,42 @@ const JPAnimation = () => {
     }
   };
 
-  return <>{this.composeAnimation(compositionExample)}</>;
+  if (compositionExample) {
+    return compositionExample.map((note, i) => {
+      return (
+        <>
+        <motion.img
+          id={`image-jp-${note.id}`}
+          className="movement-image"
+          key={`key-${note.id}`}
+          src={note.movement[0]}
+          initial={{ opacity: 0, position: "absolute" }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            ease: "linear",
+            duration: 1,
+            delay: getDurationOfPreviousNotes(compositionExample, i),
+          }}
+        />
+        <motion.img
+          id={`image-jp-${note.id}`}
+          className="movement-image"
+          key={`key-${note.id}`}
+          src={note.movement[1]}
+          initial={{ opacity: 0, position: "absolute" }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            ease: "linear",
+            duration: 1,
+            delay: getDurationOfPreviousNotes(compositionExample, i),
+          }}
+        />
+        </>
+      );
+    });
+  }
 };
 
 export default JPAnimation;
